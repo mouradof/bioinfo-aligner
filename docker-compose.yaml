@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  bioinfo-aligner:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - GO_ENV=development
